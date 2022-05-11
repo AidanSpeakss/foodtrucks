@@ -1,21 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet');
 
 :root {
-    --font: 'Montserrat', sans-serif;;
+    --fontFamily: 'Montserrat', sans-serif;
     --background: rgba(0, 0, 0, 0.55);
-    --selection: rgb(59, 59, 59);
-}
+    --linkSelection: rgb(59, 59, 59);
+    --infoHeadingColor: #ffffff;
 
-body{
-    background-color: aliceblue;
-    color: #000000;
+
+    --pageBackgroundColor: #ffffff;
+    --pageTextColorLight: #fff;
+    --pageTextColorDark: rgba(0, 0, 0, 0.55);
+
+
+
+    --pageLinkBackgroundColor:  rgba(0, 0, 0, 0.55);
 }
 
 footer {
     text-align: center;
-    font-family: var(--font);
+    font-family: var(--fontFamily);
     font-size: 0.75rem;
     font-weight: 400;
+}
+
+#backToHome {
+    width: 100%;
+    font-family: var(--fontFamily);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    line-height: 1.25;
+    display: block;
+}
+
+/* Page Specific CSS */
+body {
+    background-color: var(--pageBackgroundColor);
+    color: var(--pageTextColorDark);
 }
 
 #userPhoto{
@@ -29,7 +52,7 @@ footer {
     word-wrap: break-word;
     width: 100%;
     color: black;
-    font-family: var(--font);
+    font-family: var(--fontFamily);
     font-size: 3rem;
     font-weight: 800;
     text-align: center;
@@ -39,15 +62,16 @@ footer {
     margin: unset;
 }
 
-#links{
+#links {
     max-width: 675px;
     width: auto;
     display: block;
     margin: 0px auto;
 }
+
 .desc {
     display: block;
-    font-family: var(--font);
+    font-family: var(--fontFamily);
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
@@ -55,21 +79,27 @@ footer {
     text-align: center;
     text-decoration: none;
 }
+
 .link, .info {
     margin-top: 10px;
     display: block;
     margin-bottom: 20px;
     padding: 17px;
-    background-color: var(--background);
-    color: #ffffff;
-    font-family: var(--font);
+    background-color: var(--pageLinkBackgroundColor);
+    color: var(--pageTextColorLight);
+    font-family: var(--fontFamily);
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    transition: all .25s ease-in-out;
 }
+
 .link:hover{
-    background-color: var(--selection);
+    background-color: var(--linkSelection);
+}
+
+#map{
+    min-height: 200px;
 }
